@@ -28,7 +28,7 @@ private String idTeacher;
 
   @EqualsAndHashCode.Exclude
   @NotBlank(message = "'Students' is required")
-private Student student;
+private Student students;
 
 
 }
