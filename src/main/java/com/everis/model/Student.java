@@ -2,54 +2,17 @@ package com.everis.model;
 
 import java.util.Date;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @Data
-@Document(collection = "students")
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder(toBuilder = true)
 public class Student {
 
-  @EqualsAndHashCode.Exclude
-  @Id
-private String id;
-
-  @EqualsAndHashCode.Exclude
-  @NotBlank(message = "'Name' is required")
-private String fullName;
-
-  @EqualsAndHashCode.Exclude
-  @NotBlank(message = "'Geneder' is required")
-private String gender;
-
-  @EqualsAndHashCode.Exclude
-  @JsonFormat(pattern = "yyyy-MM-dd")
-private Date dateOfBirth;
-
-  @EqualsAndHashCode.Exclude
-  @NotBlank(message = "'Type Document' is required")
-private String typeDocument;
-
-  @EqualsAndHashCode.Exclude
-  @NotNull(message = "'Number Document' is required")
-  @Positive(message = "'Number' must be greater than zero")
-private int numberDocument;
-
-  @NotBlank(message = "'Family' is required")
-  private String idFamily;  
+  private String studentId;
+  private String fullName;
+  private String gender;
+  private Date dateOfBirth;
+  private String typeDocument;
+  private int numberDocument;
+  private String idFamily;
 
 }

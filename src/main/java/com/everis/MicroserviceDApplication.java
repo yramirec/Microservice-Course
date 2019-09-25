@@ -11,8 +11,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 @SpringBootApplication
 public class MicroserviceDApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceDApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(MicroserviceDApplication.class, args);
+  }
 
 }
