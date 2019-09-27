@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-
-
 @Service
 public class CourseService {
 
@@ -37,7 +35,7 @@ public class CourseService {
     return courseRepository.findById(id)
         .map(existingCourse -> existingCourse.toBuilder()
         .idTeacher(updateCourse.getIdTeacher())
-        .students(updateCourse.getStudents())
+        .idStudents(updateCourse.getIdStudents())
         .idStatus(updateCourse.getIdStatus())
         .build())
         .flatMap(courseRepository::save);
